@@ -1,0 +1,53 @@
+INFO [05-26|08:06:16.903] Starting Geth on Ethereum mainnet... 
+INFO [05-26|08:06:16.903] Bumping default cache on mainnet         provided=1024 updated=4096
+INFO [05-26|08:06:16.904] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [05-26|08:06:16.904] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+WARN [05-26|08:06:16.906] The generic --miner.gastarget flag is deprecated and will be removed in the future! 
+WARN [05-26|08:06:16.906] Sanitizing cache to Go's GC limits       provided=4096 updated=656
+INFO [05-26|08:06:16.906] Set global gas cap                       cap=50,000,000
+WARN [05-26|08:06:16.906] Sanitizing invalid miner gas price       provided=0    updated=1,000,000,000
+INFO [05-26|08:06:16.906] Allocated trie memory caches             clean=98.00MiB dirty=164.00MiB
+INFO [05-26|08:06:16.907] Allocated cache and file handles         database=/home/fengyuanxu/Desktop/new_go/faint_test/node1/geth/chaindata cache=328.00MiB handles=524,288
+INFO [05-26|08:06:16.942] Opened ancient database                  database=/home/fengyuanxu/Desktop/new_go/faint_test/node1/geth/chaindata/ancient readonly=false
+INFO [05-26|08:06:16.945] Initialised chain configuration          config="{ChainID: 1001 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0 Petersburg: 0 Istanbul: 0, Muir Glacier: <nil>, Berlin: <nil>, London: <nil>, Arrow Glacier: <nil>, MergeFork: <nil>, Terminal TD: <nil>, Engine: clique}"
+INFO [05-26|08:06:16.947] Initialising Ethereum protocol           network=1 dbversion=8
+INFO [05-26|08:06:17.006] Loaded most recent local header          number=1652 hash=5baae6..8d8757 td=3305 age=6d5h54m
+INFO [05-26|08:06:17.006] Loaded most recent local full block      number=1652 hash=5baae6..8d8757 td=3305 age=6d5h54m
+INFO [05-26|08:06:17.006] Loaded most recent local fast block      number=1652 hash=5baae6..8d8757 td=3305 age=6d5h54m
+INFO [05-26|08:06:17.234] Setting new local account                address=0x46A5Ba9093EBF7b040814dF42CB37A8A41610955
+INFO [05-26|08:06:17.235] Loaded local transaction journal         transactions=1 dropped=0
+INFO [05-26|08:06:17.236] Regenerated local transaction journal    transactions=1 accounts=1
+INFO [05-26|08:06:17.237] Gasprice oracle is ignoring threshold set threshold=2
+panic: invalid memory: store empty
+
+goroutine 44 [running]:
+github.com/ethereum/go-ethereum/core/vm.(*TaintMemory).Set(...)
+	github.com/ethereum/go-ethereum/core/vm/taint_memory.go:29
+github.com/ethereum/go-ethereum/core/vm.opMstore(0x0?, 0xc00098fd97?, 0xc000309dd0)
+	github.com/ethereum/go-ethereum/core/vm/instructions.go:917 +0x2b2
+github.com/ethereum/go-ethereum/core/vm.(*EVMInterpreter).Run(0xc000162000, 0xc00016c240, {0x0, 0x0, 0x0}, 0x0)
+	github.com/ethereum/go-ethereum/core/vm/interpreter.go:246 +0xb84
+github.com/ethereum/go-ethereum/core/vm.(*EVM).create(0xc00015e240, {0x181f2e0, 0xc000042678}, 0xc000990950, 0x46d9e4, 0x0?, {0x29, 0xf9, 0xd7, 0x20, ...}, ...)
+	github.com/ethereum/go-ethereum/core/vm/evm.go:456 +0x847
+github.com/ethereum/go-ethereum/core/vm.(*EVM).Create(0xc00015e240, {0x181f2e0, 0xc000042678}, {0xc00025c360, 0x109, 0x109}, 0xc0001da7e0?, 0xc000990a60?)
+	github.com/ethereum/go-ethereum/core/vm/evm.go:504 +0x250
+github.com/ethereum/go-ethereum/core.(*StateTransition).TransitionDb(0xc0001cad00)
+	github.com/ethereum/go-ethereum/core/state_transition.go:335 +0x971
+github.com/ethereum/go-ethereum/core.ApplyMessage(0x14c86a0?, {0x182d010?, 0xc0001dd170?}, 0xc00007d260?)
+	github.com/ethereum/go-ethereum/core/state_transition.go:184 +0x2a
+github.com/ethereum/go-ethereum/core.applyTransaction({0x0, {0x46, 0xa5, 0xba, 0x90, 0x93, 0xeb, 0xf7, 0xb0, 0x40, ...}, ...}, ...)
+	github.com/ethereum/go-ethereum/core/state_processor.go:101 +0x1c6
+github.com/ethereum/go-ethereum/core.ApplyTransaction(0x61c117?, {0x1820828, 0xc000103000}, 0xc0004ce4f0?, 0x424a25?, 0x42c78f?, 0xc0002ac480, 0x0?, 0x8?, {0x0, ...})
+	github.com/ethereum/go-ethereum/core/state_processor.go:155 +0x348
+github.com/ethereum/go-ethereum/miner.(*worker).commitTransaction(0xc000754480?, 0xc0003c60a0, 0xc000904060)
+	github.com/ethereum/go-ethereum/miner/worker.go:838 +0x1d6
+github.com/ethereum/go-ethereum/miner.(*worker).commitTransactions(0xc000754480, 0xc0003c60a0, 0xc0000c9540, 0xc000378680)
+	github.com/ethereum/go-ethereum/miner/worker.go:904 +0x488
+github.com/ethereum/go-ethereum/miner.(*worker).fillTransactions(0xc000754480, 0xc0009919f0?, 0xc0003c60a0)
+	github.com/ethereum/go-ethereum/miner/worker.go:1072 +0xf0
+github.com/ethereum/go-ethereum/miner.(*worker).commitWork(0xc000754480, 0xc000021b94?, 0x0, 0x628f9769)
+	github.com/ethereum/go-ethereum/miner/worker.go:1126 +0x1b2
+github.com/ethereum/go-ethereum/miner.(*worker).mainLoop(0xc000754480)
+	github.com/ethereum/go-ethereum/miner/worker.go:534 +0x76a
+created by github.com/ethereum/go-ethereum/miner.newWorker
+	github.com/ethereum/go-ethereum/miner/worker.go:293 +0x765

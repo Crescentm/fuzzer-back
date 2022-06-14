@@ -1,0 +1,66 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'solc-cli' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData solc-cli
+8 silly fetchNamedPackageData solc-cli
+9 silly mapToRegistry name solc-cli
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/solc-cli
+13 verbose request uri https://registry.npmjs.org/solc-cli
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 9:38:44 AM
+16 verbose request id a6806e039a013677
+17 http request GET https://registry.npmjs.org/solc-cli
+18 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+19 info attempt registry request try #2 at 9:38:54 AM
+20 http request GET https://registry.npmjs.org/solc-cli
+21 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+22 info attempt registry request try #3 at 9:39:54 AM
+23 http request GET https://registry.npmjs.org/solc-cli
+24 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=socket hang up
+24 silly fetchPackageMetaData     at ClientRequest.onError (/usr/share/npm/node_modules/request/node_modules/tunnel-agent/index.js:174:17)
+24 silly fetchPackageMetaData     at ClientRequest.g (events.js:260:16)
+24 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+24 silly fetchPackageMetaData     at ClientRequest.emit (events.js:169:7)
+24 silly fetchPackageMetaData     at TLSSocket.socketErrorListener (_http_client.js:258:9)
+24 silly fetchPackageMetaData     at emitOne (events.js:77:13)
+24 silly fetchPackageMetaData     at TLSSocket.emit (events.js:169:7)
+24 silly fetchPackageMetaData     at emitErrorNT (net.js:1256:8)
+24 silly fetchPackageMetaData     at nextTickCallbackWith2Args (node.js:441:9)
+24 silly fetchPackageMetaData     at process._tickCallback (node.js:355:17)
+24 silly fetchPackageMetaData  error for solc-cli { [Error: tunneling socket could not be established, cause=socket hang up] code: 'ECONNRESET' }
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Starting
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: tunneling socket could not be established, cause=socket hang up
+30 verbose stack     at ClientRequest.onError (/usr/share/npm/node_modules/request/node_modules/tunnel-agent/index.js:174:17)
+30 verbose stack     at ClientRequest.g (events.js:260:16)
+30 verbose stack     at emitOne (events.js:77:13)
+30 verbose stack     at ClientRequest.emit (events.js:169:7)
+30 verbose stack     at TLSSocket.socketErrorListener (_http_client.js:258:9)
+30 verbose stack     at emitOne (events.js:77:13)
+30 verbose stack     at TLSSocket.emit (events.js:169:7)
+30 verbose stack     at emitErrorNT (net.js:1256:8)
+30 verbose stack     at nextTickCallbackWith2Args (node.js:441:9)
+30 verbose stack     at process._tickCallback (node.js:355:17)
+31 verbose cwd /home/fengyuanxu/Desktop/EasyFlow-master/taint_contracts
+32 error Linux 4.15.0-142-generic
+33 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "solc-cli"
+34 error node v4.2.6
+35 error npm  v3.5.2
+36 error code ECONNRESET
+37 error network tunneling socket could not be established, cause=socket hang up
+38 error network This is most likely not a problem with npm itself
+38 error network and is related to network connectivity.
+38 error network In most cases you are behind a proxy or have bad network settings.
+38 error network
+38 error network If you are behind a proxy, please make sure that the
+38 error network 'proxy' config is set properly.  See: 'npm help config'
+39 verbose exit [ 1, true ]

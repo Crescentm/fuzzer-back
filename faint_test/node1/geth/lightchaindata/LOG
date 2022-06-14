@@ -1,0 +1,8 @@
+=============== May 20, 2022 (PDT) ===============
+00:42:35.720079 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:42:35.726983 db@open opening
+00:42:35.729405 version@stat F·[] S·0B[] Sc·[]
+00:42:35.736507 db@janitor F·2 G·0
+00:42:35.736576 db@open done T·9.555352ms
+00:42:35.800869 db@close closing
+00:42:35.801218 db@close done T·342.325µs
